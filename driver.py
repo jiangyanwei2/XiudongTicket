@@ -111,6 +111,9 @@ def create_instance(chrome_driver, ticketId: str, event: str, ticketNum: str, st
     confirm_url = f"https://wap.showstart.com/pages/order/activity/confirm/confirm" \
                   f"?sequence={event}&ticketId={ticketId}&ticketNum={ticketNum}" \
                   f"&ioswx=1&terminal=app&from=singlemessage&isappinstalled=0"
+
+    #https: // wap.showstart.com / pages / order / activity / confirm / confirm?sequence = 219157 & ticketId = 18646
+    #aa05850af5d89d4b30749426efc & ticketNum = 1
     pay_btn = goto_confirm_url(chrome_driver, confirm_url)
 
     if start_time is None:  # 直接抢
