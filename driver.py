@@ -41,11 +41,12 @@ def load_driver():
     if os_info == "Linux":
         executable_path = "./chromedriver_linux"
     elif os_info == "Windows":
-        executable_path = "E:\Python\chromedriver.exe"
+        executable_path = ("C:\\Myp"
+                           "rogram\\chromedriver_win32\\chromedriver.exe")
     else:  # mac or other
         executable_path = "./chromedriver"
 
-    driver = webdriver.Chrome(executable_path=executable_path, desired_capabilities=caps, options=options)
+    driver = webdriver.Chrome(options=options)
 
     return driver
 
